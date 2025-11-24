@@ -1,0 +1,14 @@
+name: Variables de entorno
+
+on:
+  push:
+jobs:
+  saludar-con-variables:
+    runs-on: ubuntu-latest
+
+    env:
+      Nombre: "Richard Avalos"
+
+    steps:
+      - name: Mostrar Saludo
+        run: echo "Hola, mi nombre es $Nombre y estos aprendiendo CI/CD"
